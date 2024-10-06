@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import data from "./mock-data.json";
+import { useQuery } from '@apollo/client';
+import { GET_SWAG_SHOP_EXPERIENCE } from './queries';
 import {
   SwagShopHeader,
   SwagShopHeaderProps,
@@ -29,7 +28,14 @@ import {
 import { Box } from "@mui/material";
 
 function App() {
-  const typedData = data as unknown as {
+  const { loading, error, data } = useQuery(GET_SWAG_SHOP_EXPERIENCE);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  console.log('Fetched data:', data);
+
+  const typedData = data.swagShopExperience as {
     header: SwagShopHeaderProps;
     categoryBar: CategoryBarProps;
     productDetails: ProductDetailsProps;
