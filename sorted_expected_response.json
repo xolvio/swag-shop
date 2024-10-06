@@ -1,0 +1,225 @@
+{
+  "categoryBar": {
+    "categories": [
+      {
+        "label": "Sales",
+        "url": "/sales"
+      },
+      {
+        "label": "Woman",
+        "url": "/woman"
+      },
+      {
+        "label": "Men",
+        "url": "/men"
+      },
+      {
+        "label": "Boys",
+        "url": "/boys"
+      },
+      {
+        "label": "Girls",
+        "url": "/girls"
+      },
+      {
+        "label": "Baby",
+        "url": "/baby"
+      },
+      {
+        "label": "Sports",
+        "url": "/sports"
+      },
+      {
+        "label": "Home",
+        "url": "/home"
+      },
+      {
+        "label": "Autumn",
+        "url": "/autumn"
+      },
+      {
+        "label": "Christmas",
+        "url": "/christmas"
+      },
+      {
+        "label": "Brands",
+        "url": "/brands"
+      },
+      {
+        "label": "Beauty",
+        "url": "/beauty"
+      },
+      {
+        "label": "Gifts & Flowers",
+        "url": "/gifts-flowers"
+      }
+    ]
+  },
+  "footer": {
+    "address": "San Fransisco",
+    "categories": [
+      {
+        "category": "For buyers",
+        "links": [
+          {
+            "label": "Payment",
+            "url": "/payment"
+          },
+          {
+            "label": "Personal Data Policy",
+            "url": "/personal-data-policy"
+          },
+          {
+            "label": "Actions",
+            "url": "/actions"
+          },
+          {
+            "label": "Gift Certificates",
+            "url": "/gift-certificates"
+          }
+        ]
+      },
+      {
+        "category": "",
+        "links": [
+          {
+            "label": "Affiliate Program",
+            "url": "/affiliate-program"
+          },
+          {
+            "label": "Rules for Using Promotional Codes",
+            "url": "/rules-promotional-codes"
+          }
+        ]
+      },
+      {
+        "category": "About Xolvio",
+        "links": [
+          {
+            "label": "About Us",
+            "url": "/about-us"
+          },
+          {
+            "label": "Contact Us",
+            "url": "/contact-us"
+          },
+          {
+            "label": "News",
+            "url": "/news"
+          },
+          {
+            "label": "Vacancies",
+            "url": "/vacancies"
+          }
+        ]
+      }
+    ],
+    "copyrights": "All Rights Reserved. Xolvio, Inc.",
+    "email": "contact@xolv.io",
+    "phone": "(415) 857-1317"
+  },
+  "header": {
+    "cart": {
+      "itemCount": 2
+    }
+  },
+  "productDetails": {
+    "breadcrumbs": "Home  /  Men  /  New In  /  Xolvio oversized hoodie",
+    "product": {
+      "altImages": [
+        {
+          "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-black-back.jpg"
+        },
+        {
+          "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-white-front.jpg"
+        },
+        {
+          "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-white-back.jpg"
+        }
+      ],
+      "description": "Introducing our Oversized Hoodie with Print: This hoodie combines fleece fabric for ultimate comfort, an oversized fit for a relaxed look, and eye catching prints to express your style. With a kangaroo pocket for convince, durable quality for longevity, and versatile styling options, it's the perfect addition to your wardrobe. Plus it makes a great gift. Elevate your comfort and fashion game with this must-have hoodie today.",
+      "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-black-front.jpg",
+      "inventory": {
+        "inStock": true
+      },
+      "options": {
+        "colors": [
+          {
+            "name": "black"
+          },
+          {
+            "name": "white"
+          }
+        ],
+        "sizes": [
+          {
+            "label": "XS"
+          },
+          {
+            "label": "S"
+          },
+          {
+            "label": "M"
+          },
+          {
+            "label": "L"
+          }
+        ]
+      },
+      "price": 19.99,
+      "shipping": {
+        "freeReturns": true,
+        "minDeliveryDate": "Tomorrow, 26 August",
+        "minPrice": 3.99,
+        "orderDeadline": "10 hrs 46 min"
+      },
+      "title": "Xolvio oversized hoodie"
+    }
+  },
+  "similarProducts": {
+    "products": [
+      {
+        "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-2-black.jpg",
+        "liked": false,
+        "options": {
+          "colors": 2
+        },
+        "price": 24.99,
+        "title": "Xolvio hoodie"
+      },
+      {
+        "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-3-black.jpg",
+        "liked": false,
+        "options": {
+          "colors": 2
+        },
+        "price": 18.99,
+        "title": "Xolvio hoodie"
+      },
+      {
+        "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-polo-white.jpg",
+        "liked": false,
+        "options": {
+          "colors": 2
+        },
+        "price": 22.99,
+        "title": "Xolvio polo shirt"
+      },
+      {
+        "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-shirt-2-white.jpg",
+        "liked": false,
+        "options": {
+          "colors": 1
+        },
+        "price": 14.99,
+        "title": "Xolvio t-shirt"
+      }
+    ]
+  },
+  "subscribeBar": {
+    "content": {
+      "copy": "and get a 10% discount on your first purchase!",
+      "header": "Subscribe to our newsletter"
+    }
+  }
+}

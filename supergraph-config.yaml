@@ -1,0 +1,14 @@
+federation_version: 2
+subgraphs:
+  catalog-navigation:
+    routing_url: http://localhost:4001
+    schema:
+      file: ./catalog-navigation/schema.graphql
+  product-inventory:
+    routing_url: http://localhost:4002
+    schema:
+      file: ./product-inventory/schema.graphql
+  customer-engagement:
+    routing_url: http://localhost:4003
+    schema:
+      file: ./customer-engagement/schema.graphql

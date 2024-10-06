@@ -1,0 +1,123 @@
+extend schema
+  @link(
+    url: "https://specs.apollo.dev/federation/v2.0"
+    import: ["@key", "@shareable"]
+  )
+
+schema {
+  query: Query
+}
+
+type Query {
+  swagShopExperience: SwagShopExperience
+}
+
+type SwagShopExperience @key(fields: "slug") {
+  slug: String
+  header: Header
+  categoryBar: CategoryBar
+  productDetails: ProductDetails
+  similarProducts: SimilarProducts
+  subscribeBar: SubscribeBar
+  footer: Footer
+}
+
+type Header {
+  cart: Cart
+}
+
+type Cart {
+  itemCount: Int
+}
+
+type CategoryBar {
+  categories: [Category!]!
+}
+
+type Category {
+  label: String!
+  url: String!
+}
+
+type ProductDetails {
+  breadcrumbs: String!
+  product: Product!
+}
+
+type Product {
+  title: String!
+  image: String!
+  price: Float!
+  description: String!
+  altImages: [AltImage!]!
+  options: ProductOptions!
+  inventory: Inventory!
+  shipping: Shipping!
+}
+
+type AltImage {
+  image: String!
+}
+
+type ProductOptions {
+  colors: [Color!]!
+  sizes: [Size!]!
+}
+
+type Color {
+  name: String!
+}
+
+type Size {
+  label: String!
+}
+
+type Inventory {
+  inStock: Boolean!
+}
+
+type Shipping {
+  minPrice: Float!
+  minDeliveryDate: String!
+  orderDeadline: String!
+  freeReturns: Boolean!
+}
+
+type SimilarProducts {
+  products: [SimilarProduct!]!
+}
+
+type SimilarProduct {
+  liked: Boolean!
+  image: String!
+  title: String!
+  price: Float!
+  options: ProductOptions
+}
+
+type SubscribeBar {
+  content: SubscriptionContent
+}
+
+type SubscriptionContent {
+  header: String!
+  copy: String!
+}
+
+type Footer {
+  categories: [FooterCategory!]!
+  phone: String
+  email: String
+  copyrights: String!
+  address: String!
+}
+
+type FooterCategory {
+  category: String
+  links: [FooterLink!]!
+}
+
+type FooterLink {
+  label: String!
+  url: String!
+}
