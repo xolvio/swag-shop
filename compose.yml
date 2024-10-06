@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  catalog-navigation:
+    build:
+      context: ./catalog-navigation
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+  product-inventory:
+    build:
+      context: ./product-inventory
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+  customer-engagement:
+    build:
+      context: ./customer-engagement
+    ports:
+      - "4003:4003"
+    environment:
+      - PORT=4003

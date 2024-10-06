@@ -13,6 +13,8 @@ import { GraphQLError } from "graphql";
 const port = process.env.PORT ?? "4003";
 const subgraphName = require("../package.json").name;
 const routerSecret = process.env.ROUTER_SECRET;
+const foo = "foo";
+console.log(foo);
 
 const context: ContextFunction<
   [StandaloneServerContextFunctionArgument],

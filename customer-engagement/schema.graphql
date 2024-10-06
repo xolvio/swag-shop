@@ -10,6 +10,9 @@ schema {
 
 type Query {
   swagShopExperience: SwagShopExperience
+  newSSQuery: String!
+  new: String
+  foo: String
 }
 
 type SwagShopExperience @key(fields: "slug") {

@@ -100,6 +100,9 @@ export type ProductOptions = {
 
 export type Query = {
   __typename?: 'Query';
+  foo?: Maybe<Scalars['String']['output']>;
+  new?: Maybe<Scalars['String']['output']>;
+  newSSQuery: Scalars['String']['output'];
   swagShopExperience?: Maybe<SwagShopExperience>;
 };
 
@@ -373,6 +376,9 @@ export type ProductOptionsResolvers<ContextType = DataSourceContext, ParentType 
 }>;
 
 export type QueryResolvers<ContextType = DataSourceContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
+  foo?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  new?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  newSSQuery?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   swagShopExperience?: Resolver<Maybe<ResolversTypes['SwagShopExperience']>, ParentType, ContextType>;
 }>;
 

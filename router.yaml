@@ -1,6 +1,0 @@
-supergraph:
-  introspection: true
-server:
-  port: 4000
-cors:
-  origins: []
