@@ -18,7 +18,6 @@
         "label": "Men",
         "url": "/men"
       },
-
       {
         "label": "Boys",
         "url": "/boys"
@@ -67,7 +66,7 @@
       "title": "Xolvio oversized hoodie",
       "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-black-front.jpg",
       "price": 19.99,
-      "description": "Introducing our Oversized Hoodie with Print: This hoodie combines fleece fabric for ultimate comfort, an oversized fit for a relaxed look, and eye catching prints to express your style. With a kangaroo pocket for convince, durable quality for longevity, and versatile styling options, it's the perfect addition to your wardrobe. Plus it makes a great gift. Elevate your comfort and fashion game with this must-have hoodie today.",
+      "description": "Introducing our Oversized Hoodie with Print: This hoodie combines fleece fabric for ultimate comfort, an oversized fit for a relaxed look, and eye-catching prints to express your style. With a kangaroo pocket for convenience, durable quality for longevity, and versatile styling options, it's the perfect addition to your wardrobe. Plus it makes a great gift. Elevate your comfort and fashion game with this must-have hoodie today.",
       "altImages": [
         {
           "image": "https://raw.githubusercontent.com/rinorzk/xolvio-swag/refs/heads/main/xolvio-hoodie-black-back.jpg"
@@ -122,7 +121,14 @@
         "title": "Xolvio hoodie",
         "price": 24.99,
         "options": {
-          "colors": 2
+          "colors": [
+            {
+              "name": "black"
+            },
+            {
+              "name": "white"
+            }
+          ]
         }
       },
       {
@@ -131,7 +137,14 @@
         "title": "Xolvio hoodie",
         "price": 18.99,
         "options": {
-          "colors": 2
+          "colors": [
+            {
+              "name": "black"
+            },
+            {
+              "name": "white"
+            }
+          ]
         }
       },
       {
@@ -140,7 +153,14 @@
         "title": "Xolvio polo shirt",
         "price": 22.99,
         "options": {
-          "colors": 2
+          "colors": [
+            {
+              "name": "white"
+            },
+            {
+              "name": "blue"
+            }
+          ]
         }
       },
       {
@@ -149,7 +169,11 @@
         "title": "Xolvio t-shirt",
         "price": 14.99,
         "options": {
-          "colors": 1
+          "colors": [
+            {
+              "name": "white"
+            }
+          ]
         }
       }
     ]

@@ -8,7 +8,7 @@ export interface SimilarProductsProps {
     title: string;
     price: number;
     options: {
-      colors: number;
+      colors: { name: string }[];
     };
   }[];
 }
@@ -60,7 +60,7 @@ export const SimilarProducts = (props: SimilarProductsProps) => {
               my={2}
             >
               <Typography>{product.title}</Typography>
-              <Typography>{product.options.colors} colors</Typography>
+              <Typography>{product.options.colors.length} colors</Typography>
             </Box>
             <Typography fontWeight={"600"}>${product.price}</Typography>
             <Box
