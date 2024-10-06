@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
-export const GET_SWAG_SHOP_EXPERIENCE = gql`
-  query GetSwagShopExperience {
+export const SWAG_SHOP_EXPERIENCE = gql`
+  query SwagShopExperience {
     swagShopExperience {
       header {
         cart {
@@ -78,3 +78,4 @@ export const GET_SWAG_SHOP_EXPERIENCE = gql`
     }
   }
 `;
+

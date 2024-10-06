@@ -9,6 +9,9 @@ import {
 import resolvers from "./resolvers";
 import { DataSourceContext } from "./types/DataSourceContext";
 import { GraphQLError } from "graphql";
+import { expressMiddleware } from "@apollo/server/express4";
+import cors from "cors";
+import express from "express";
 
 const port = process.env.PORT ?? "4003";
 const subgraphName = require("../package.json").name;
@@ -43,13 +46,26 @@ async function main() {
   const server = new ApolloServer({
     schema: buildSubgraphSchema({ typeDefs, resolvers }),
   });
-  const { url } = await startStandaloneServer(server, {
-    context,
-    listen: { port: Number.parseInt(port) },
-  });
 
-  console.log(`🚀  Subgraph ${subgraphName} ready at ${url}`);
-  console.log(`Run rover dev --url ${url} --name ${subgraphName}`);
+  await server.start();
+
+  const app = express();
+
+  app.use(
+    '/',
+    cors({
+      origin: true,
+      credentials: true,
+    }),
+    express.json(),
+    expressMiddleware(server)
+  );
+
+  app.listen(port, () => {
+    console.log(`🚀 Subgraph ready at http://localhost:${port}`);
+  });
 }
 
-main();
+main().catch((error) => {
+  console.error('Error starting the server:', error);
+});
