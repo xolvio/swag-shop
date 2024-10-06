@@ -1,6 +1,6 @@
 import React from "react";
-import { useQuery } from '@apollo/client';
-import { GET_SWAG_SHOP_EXPERIENCE } from './queries';
+import { useQuery } from "@apollo/client";
+import { SWAG_SHOP_EXPERIENCE } from "./queries";
 import {
   SwagShopHeader,
   SwagShopHeaderProps,
@@ -28,12 +28,14 @@ import {
 import { Box } from "@mui/material";
 
 function App() {
-  const { loading, error, data } = useQuery(GET_SWAG_SHOP_EXPERIENCE);
+  const { loading, error, data } = useQuery(SWAG_SHOP_EXPERIENCE);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  console.log('Fetched data:', data);
+  if (data) {
+    console.log("Fetched data:", data);
+  }
 
   const typedData = data.swagShopExperience as {
     header: SwagShopHeaderProps;
