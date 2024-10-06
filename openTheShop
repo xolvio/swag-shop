@@ -1,7 +1,8 @@
 #!/bin/bash
 
-npx concurrently --names "Catalog,Product,Customer,Router" --prefix-colors "blue,green,magenta,cyan" \
+npx concurrently --names "Catalog,Product,Customer,Router,Client" --prefix-colors "blue,green,magenta,cyan,yellow" \
   "cd catalog-navigation && npm install && npm run dev" \
   "cd product-inventory && npm install && npm run dev" \
   "cd customer-engagement && npm install && npm run dev" \
-  "rover dev --supergraph-config supergraph-config.yaml --log debug"
+  "rover dev --supergraph-config supergraph-config.yaml --log debug" \
+  "cd client && npm install && npm run start"
