@@ -103,6 +103,8 @@ export type Query = {
   foo?: Maybe<Scalars['String']['output']>;
   new?: Maybe<Scalars['String']['output']>;
   newSSQuery: Scalars['String']['output'];
+  productDetails?: Maybe<ProductDetails>;
+  similarProducts?: Maybe<SimilarProducts>;
   swagShopExperience?: Maybe<SwagShopExperience>;
 };
 
@@ -379,6 +381,8 @@ export type QueryResolvers<ContextType = DataSourceContext, ParentType extends R
   foo?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   new?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   newSSQuery?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  productDetails?: Resolver<Maybe<ResolversTypes['ProductDetails']>, ParentType, ContextType>;
+  similarProducts?: Resolver<Maybe<ResolversTypes['SimilarProducts']>, ParentType, ContextType>;
   swagShopExperience?: Resolver<Maybe<ResolversTypes['SwagShopExperience']>, ParentType, ContextType>;
 }>;
 

@@ -2,7 +2,6 @@ import { gql } from "@apollo/client";
 
 export const SWAG_SHOP_EXPERIENCE = gql`
   query SwagShopExperience {
-    swagShopExperience {
       productDetails {
         breadcrumbs
         product {
@@ -46,5 +45,4 @@ export const SWAG_SHOP_EXPERIENCE = gql`
         }
       }
     }
-  }
 `;

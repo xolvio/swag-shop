@@ -41,9 +41,9 @@ function App() {
   const typedData = {
     header: staticData.header as unknown,
     categoryBar: staticData.categoryBar as unknown,
-    productDetails: data.swagShopExperience?.productDetails,
+    productDetails: data.productDetails,
     subscribeBar: staticData.subscribeBar as unknown,
-    similarProducts: data.swagShopExperience?.similarProducts,
+    similarProducts: data.similarProducts,
     footer: staticData.footer as unknown,
   } as {
     header: SwagShopHeaderProps;

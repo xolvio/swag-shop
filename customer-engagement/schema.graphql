@@ -1,8 +1,8 @@
 extend schema
-  @link(
-    url: "https://specs.apollo.dev/federation/v2.0"
-    import: ["@key", "@shareable"]
-  )
+@link(
+  url: "https://specs.apollo.dev/federation/v2.0"
+  import: ["@key", "@shareable"]
+)
 
 schema {
   query: Query
@@ -13,6 +13,8 @@ type Query {
   newSSQuery: String!
   new: String
   foo: String
+  productDetails: ProductDetails
+  similarProducts: SimilarProducts
 }
 
 type SwagShopExperience @key(fields: "slug") {

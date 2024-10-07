@@ -142,6 +142,8 @@ type Query
 {
   catalogNavigation: String @join__field(graph: CATALOG_NAVIGATION)
   swagShopExperience(slug: String): SwagShopExperience @join__field(graph: CUSTOMER_ENGAGEMENT)
+  productDetails: ProductDetails @join__field(graph: CUSTOMER_ENGAGEMENT)
+  similarProducts: SimilarProducts @join__field(graph: CUSTOMER_ENGAGEMENT)
   productInventory: String @join__field(graph: PRODUCT_INVENTORY)
 }
 
