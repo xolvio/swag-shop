@@ -26,6 +26,7 @@ import {
   SwagShopFooterProps,
 } from "./components/footer/footer";
 import { Box } from "@mui/material";
+import staticData from "./mock-data.json";
 
 function App() {
   const { loading, error, data } = useQuery(SWAG_SHOP_EXPERIENCE);
@@ -37,7 +38,14 @@ function App() {
     console.log("Fetched data:", data);
   }
 
-  const typedData = data.swagShopExperience as {
+  const typedData = {
+    header: staticData.header as unknown,
+    categoryBar: staticData.categoryBar as unknown,
+    productDetails: data.swagShopExperience?.productDetails,
+    subscribeBar: staticData.subscribeBar as unknown,
+    similarProducts: data.swagShopExperience?.similarProducts,
+    footer: staticData.footer as unknown,
+  } as {
     header: SwagShopHeaderProps;
     categoryBar: CategoryBarProps;
     productDetails: ProductDetailsProps;

@@ -3,17 +3,6 @@ import { gql } from "@apollo/client";
 export const SWAG_SHOP_EXPERIENCE = gql`
   query SwagShopExperience {
     swagShopExperience {
-      header {
-        cart {
-          itemCount
-        }
-      }
-      categoryBar {
-        categories {
-          label
-          url
-        }
-      }
       productDetails {
         breadcrumbs
         product {
@@ -56,26 +45,6 @@ export const SWAG_SHOP_EXPERIENCE = gql`
           }
         }
       }
-      subscribeBar {
-        content {
-          header
-          copy
-        }
-      }
-      footer {
-        categories {
-          category
-          links {
-            label
-            url
-          }
-        }
-        phone
-        email
-        copyrights
-        address
-      }
     }
   }
 `;
-
