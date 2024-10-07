@@ -1,11 +1,22 @@
 #!/bin/bash
 
+ROUTER_PATH="./router/router"
+
+if [ ! -f "$ROUTER_PATH" ]; then
+  echo "Apollo Router not found. Downloading..."
+  mkdir -p ./router
+  curl -sSL https://router.apollo.dev/download/nix/latest | sh -s -- -b ./router
+  if [ ! -f "$ROUTER_PATH" ]; then
+    echo "Failed to download Apollo Router. Please install it manually."
+    exit 1
+  fi
+  echo "Apollo Router downloaded successfully."
+fi
+
+# Run the services
 npx concurrently --names "Catalog,Product,Customer,Router,Client" --prefix-colors "blue,green,magenta,cyan,yellow" \
   "cd catalog-navigation && npm install && npm run dev" \
   "cd product-inventory && npm install && npm run dev" \
   "cd customer-engagement && npm install && npm run dev" \
   "cd router && ./router -c router.yaml -s supergraph.graphql" \
   "cd client && npm install && npm run start"
-
-# OR
-# "rover dev --supergraph-config supergraph-config.yaml --router-config ./router/router.yaml" \
