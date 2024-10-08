@@ -226,7 +226,7 @@ export const ProductDetails = (props: ProductDetailsProps) => {
           <Typography variant={"h5"} mb={3} fontWeight={"500"}>
             Description
           </Typography>
-          {product.description}
+          {product.description ? product.description : "No description found"}
         </Box>
       </Stack>
     </Box>

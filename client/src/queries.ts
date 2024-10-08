@@ -8,7 +8,6 @@ export const SWAG_SHOP_EXPERIENCE = gql`
           title
           image
           price
-          description
           altImages {
             image
           }
