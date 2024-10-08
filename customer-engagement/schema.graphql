@@ -53,7 +53,6 @@ type Product {
   title: String!
   image: String!
   price: Float!
-  description: String!
   altImages: [AltImage!]!
   options: ProductOptions!
   inventory: Inventory!

@@ -77,7 +77,6 @@ export type Inventory = {
 export type Product = {
   __typename?: 'Product';
   altImages: Array<AltImage>;
-  description: Scalars['String']['output'];
   image: Scalars['String']['output'];
   inventory: Inventory;
   options: ProductOptions;
@@ -355,7 +354,6 @@ export type InventoryResolvers<ContextType = DataSourceContext, ParentType exten
 
 export type ProductResolvers<ContextType = DataSourceContext, ParentType extends ResolversParentTypes['Product'] = ResolversParentTypes['Product']> = ResolversObject<{
   altImages?: Resolver<Array<ResolversTypes['AltImage']>, ParentType, ContextType>;
-  description?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   image?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   inventory?: Resolver<ResolversTypes['Inventory'], ParentType, ContextType>;
   options?: Resolver<ResolversTypes['ProductOptions'], ParentType, ContextType>;
